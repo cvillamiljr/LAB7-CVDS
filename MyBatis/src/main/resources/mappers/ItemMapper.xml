@@ -18,6 +18,12 @@
         
     </resultMap> 
     
+    <insert id="insertarItem">
+        insert into VI_ITEMS (tipo,id,nombre,descripcion,fechalanzamiento,tarifaxdia,formatorenta,genero)
+        values (#{item.id},#{username},#{password},#{email},#{bio})
+    </insert>
+    
+    
     
     
 </mapper>
