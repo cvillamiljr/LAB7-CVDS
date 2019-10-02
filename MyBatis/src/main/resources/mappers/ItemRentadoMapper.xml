@@ -10,12 +10,10 @@
         <id column="id" property="id"/>
         <result column="fecha" property="fecha"/>
         <result column="fechafinrenta" property="fechafinrenta"/>
-        <collection property='Item' ofType='Item' resultMap='ItemDetalleResult'></collection>
+        <collection property='item' ofType='item' columnPrefix='item_' resultMap="edu.eci.cvds.sampleprj.dao.mybatis.mappers.ItemMapper.ItemResult"></collection>
         
     </resultMap> 
     
-    <select parameterType="map" id="consultarClientes" resultMap="ClienteResult">
-        select * from VI_ITEMRENTADO;
-    </select>
+    
           	
 </mapper>

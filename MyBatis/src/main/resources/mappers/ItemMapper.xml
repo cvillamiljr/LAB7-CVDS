@@ -14,13 +14,10 @@
         <result column="tarifaxdia" property="tarifaxdia"/>
         <result column="formatorenta" property="formatorenta"/>
         <result column="genero" property="genero"/>
-        <association property='tipo' ofType='TipoItem' resultMap='tipoItemResult'></association>
+        <association property='tipo' javaType='TipoItem' resultMap='edu.eci.cvds.sampleprj.dao.mybatis.mappers.TipoItemMapper.tipoItemResult' columnPrefix='tipoitem_'></association>
         
     </resultMap> 
     
-    <select parameterType="map" id="consultarClientes" resultMap="ClienteResult">
-        select * from VI_ITEMS ;
-    </select>
     
     
 </mapper>

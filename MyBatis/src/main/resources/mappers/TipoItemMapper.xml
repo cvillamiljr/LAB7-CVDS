@@ -13,8 +13,6 @@
         
     </resultMap> 
     
-    <select parameterType="map" id="consultarClientes" resultMap="ClienteResult">
-        select * from VI_TIPOITEM ;
-    </select>
+    
                 
 </mapper>
