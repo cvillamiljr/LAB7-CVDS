@@ -14,5 +14,11 @@
         
     </resultMap> 
     
+    <insert parameterType="map" id="insertarTipoItem">
+        inset into VI_ITEMRENTADO(id,clientes,ITEMS_id,fechainiciorenta,fechafinrenta) values (#{irid.id},#{irid.clientes},#{irid.ITEMS_id},#{irid.fechainiciorenta},#{irid.fechafinrenta})
+    </insert>
+    <select parameterType="map" id="consultarItemRentado" resultMap="ItemRentadoResult">
+        select * from VI_ITEMRENTADO where id = #{irid}
+    </select>
           	
 </mapper>

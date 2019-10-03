@@ -13,6 +13,12 @@
         
     </resultMap> 
     
+    <insert parameterType="map" id="insertarTipoItem"> 
+        insert into VI_TIPOITEM(id,descripcion) values (#{titem.id},#{titem.descripcion})
+    </insert>
     
+    <select parameterType="map" id="consultarItem" resultMap="TipoItemResult">
+        select id,descripcion from VI_TIPOITEM  where id = #{titem}
+    </select>
                 
 </mapper>

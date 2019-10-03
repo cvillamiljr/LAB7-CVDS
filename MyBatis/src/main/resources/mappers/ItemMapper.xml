@@ -14,7 +14,7 @@
         <result column="tarifaxdia" property="tarifaxDia"/>
         <result column="formatorenta" property="formatoRenta"/>
         <result column="genero" property="genero"/>
-        <association property='tipo' javaType='TipoItem' resultMap='edu.eci.cvds.sampleprj.dao.mybatis.mappers.TipoItemMapper.tipoItemResult' columnPrefix='tipoitem_'></association>
+        <association property='tipo' javaType='TipoItem' resultMap='edu.eci.cvds.sampleprj.dao.mybatis.mappers.TipoItemMapper.TipoItemResult' columnPrefix='tipoitem_'></association>
         
     </resultMap> 
     

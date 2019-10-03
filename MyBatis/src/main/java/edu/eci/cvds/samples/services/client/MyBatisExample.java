@@ -20,6 +20,9 @@ package edu.eci.cvds.samples.services.client;
 
 import edu.eci.cvds.sampleprj.dao.mybatis.mappers.ClienteMapper;
 import edu.eci.cvds.sampleprj.dao.mybatis.mappers.ItemMapper;
+import edu.eci.cvds.sampleprj.dao.mybatis.mappers.ItemRentadoMapper;
+import edu.eci.cvds.sampleprj.dao.mybatis.mappers.TipoItemMapper;
+import edu.eci.cvds.samples.entities.Cliente;
 import edu.eci.cvds.samples.entities.Item;
 import edu.eci.cvds.samples.entities.TipoItem;
 import java.io.IOException;
@@ -70,16 +73,27 @@ public class MyBatisExample {
         
         //Crear el mapper y usarlo: 
         ClienteMapper cm=sqlss.getMapper(ClienteMapper.class);
-        System.out.println(cm.consultarCliente(6));
+        //System.out.println(cm.consultarCliente(6));
+        //Cliente david = new Cliente("David nadal",102431,"32323", "tu casa", "david@gmail.migente");
+        //cm.insertarCliente(david);
         
-        ItemMapper cm2=sqlss.getMapper(ItemMapper.class);
-        Item items = new Item(new TipoItem(1,"holamu ndo1"),4567564,"holamundo2","holamundo2",new Date(), 1L,"no se","no soy cientifico");
-        cm2.insertarItem(items);
+        //ItemMapper cm2=sqlss.getMapper(ItemMapper.class);
+        //Item items = new Item(new TipoItem(1,"holamu ndo1"),4567564,"holamundo2","holamundo2",new Date(), 1L,"no se","no soy cientifico");
+        //cm2.insertarItem(items);
         
         //ItemMapper cm3=sqlss.getMapper(ItemMapper.class);
         
-        //System.out.println(cm3.consultarItem(1));
+        //System.out.println(cm3.consultarItem(69));
         //System.out.println(cm3.consultarItems());
+        
+        //TipoItemMapper cm4=sqlss.getMapper(TipoItemMapper.class);
+        //TipoItem prueba = new TipoItem(12,"hola mundo");
+        //System.out.println(cm4.consultarItem(12));
+        
+        
+        ItemRentadoMapper cm5=sqlss.getMapper(ItemRentadoMapper.class);
+        System.out.println(cm5.consultarItemRentado(22));
+        
         sqlss.commit();
         sqlss.close();
 

@@ -48,6 +48,8 @@ public class TipoItem implements Serializable{
     public String toString() {
         return "TipoItem{" + "id=" + id + ", descripcion=" + descripcion + '}';
     }
+
+    
     
     
 }
