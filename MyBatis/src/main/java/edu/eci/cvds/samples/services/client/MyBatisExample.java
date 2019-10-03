@@ -73,9 +73,13 @@ public class MyBatisExample {
         System.out.println(cm.consultarCliente(6));
         
         ItemMapper cm2=sqlss.getMapper(ItemMapper.class);
-        Item items = new Item(new TipoItem(1,"holamu ndo1"),2144,"holamundo2","holamundo2",new Date(), 1L,"no se","no soy cientifico");
+        Item items = new Item(new TipoItem(1,"holamu ndo1"),4567564,"holamundo2","holamundo2",new Date(), 1L,"no se","no soy cientifico");
         cm2.insertarItem(items);
         
+        //ItemMapper cm3=sqlss.getMapper(ItemMapper.class);
+        
+        //System.out.println(cm3.consultarItem(1));
+        //System.out.println(cm3.consultarItems());
         sqlss.commit();
         sqlss.close();
 
