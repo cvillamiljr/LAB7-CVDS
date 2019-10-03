@@ -1,5 +1,5 @@
 # LAB7-CVDS
 
-> ##Integrantes
+> ## Integrantes
 >- Andres Rocha
 >- David Herrera
