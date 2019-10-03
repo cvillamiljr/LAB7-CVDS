@@ -35,6 +35,7 @@ public class JDBCExample {
     
     public static void main(String args[]){
         try {
+            
             String url="jdbc:mysql://desarrollo.is.escuelaing.edu.co:3306/bdprueba";
             String driver="com.mysql.jdbc.Driver";
             String user="bdprueba";
@@ -126,6 +127,7 @@ public class JDBCExample {
 		
         return np;
     }
+    
 
     
     /**

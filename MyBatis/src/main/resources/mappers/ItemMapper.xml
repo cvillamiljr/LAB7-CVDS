@@ -10,17 +10,17 @@
         <id column="id" property="id"/>
         <result column="name" property="name"/>
         <result column="descripcion" property="descripcion"/>
-        <result column="fechalanzamiento" property="fechalanzamiento"/>
-        <result column="tarifaxdia" property="tarifaxdia"/>
-        <result column="formatorenta" property="formatorenta"/>
+        <result column="fechalanzamiento" property="fechaLanzamiento"/>
+        <result column="tarifaxdia" property="tarifaxDia"/>
+        <result column="formatorenta" property="formatoRenta"/>
         <result column="genero" property="genero"/>
         <association property='tipo' javaType='TipoItem' resultMap='edu.eci.cvds.sampleprj.dao.mybatis.mappers.TipoItemMapper.tipoItemResult' columnPrefix='tipoitem_'></association>
         
     </resultMap> 
     
-    <insert id="insertarItem">
-        insert into VI_ITEMS (tipo,id,nombre,descripcion,fechalanzamiento,tarifaxdia,formatorenta,genero)
-        values (#{item.id},#{username},#{password},#{email},#{bio})
+    <insert parameterType ='map' id="insertarItem">
+        insert into VI_ITEMS(id,name,descripcion,fechaLanzamiento,tarifaxDia,formatoRenta,genero,TIPOITEM_id)
+        values (#{item.id},#{item.name},#{item.descripcion},#{item.fechaLanzamiento},#{item.tarifaxDia},#{item.formatoRenta},#{item.genero},#{item.tipo.id})
     </insert>
     
     
