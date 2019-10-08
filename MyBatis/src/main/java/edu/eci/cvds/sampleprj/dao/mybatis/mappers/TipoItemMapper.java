@@ -19,4 +19,8 @@ public interface TipoItemMapper {
     
     public void insertarTipoItem(@Param("titem")TipoItem it);
 
+    public TipoItem consultarTipoItem(@Param("titem")int id);
+
+    public List<TipoItem> consultarTiposItem();
+
 }
