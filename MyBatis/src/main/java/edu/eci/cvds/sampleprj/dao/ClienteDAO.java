@@ -4,7 +4,7 @@ import edu.eci.cvds.samples.entities.Cliente;
 import edu.eci.cvds.samples.entities.Item;
 import edu.eci.cvds.samples.entities.ItemRentado;
 import java.util.List;
-
+import edu.eci.cvds.sampleprj.dao.PersistenceException;
 
 public interface ClienteDAO {
 
